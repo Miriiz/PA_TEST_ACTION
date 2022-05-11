@@ -31,7 +31,7 @@ jobs:
         with: 
           python-version : 3.8
       - name : execute py script
-        run: "ls -la && cd .github && ls -la"
+        run: "ls -la && cd .github && cd workflows && ls -la "
       - name : cd fil
         env:
           EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
