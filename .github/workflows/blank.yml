@@ -33,10 +33,7 @@ jobs:
       - name : execute py script
         run: "ls -la"
       - name : cd fil
-        run : "cd .github"
-      - name : other ls
-        run : "ls -la"
-
+        run : "cd .github && python main.py"
         
         
 
