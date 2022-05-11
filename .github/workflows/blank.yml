@@ -38,7 +38,7 @@ jobs:
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
         run :
-          python .github/workflows/main.py
+          python .github/workflows/src/docGeneration/main.py
         
         
 
