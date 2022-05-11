@@ -32,7 +32,8 @@ jobs:
           python-version : 3.8
       - name : execute py script
         run: "ls -la"
-          
+      - name : cd fil
+        run : "cd .github"
 
         
         
