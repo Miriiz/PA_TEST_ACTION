@@ -32,7 +32,7 @@ jobs:
           python-version : 3.8
       - name : execute py script
         run:
-          python main.py
+          ./.github/main.py
 
         
         
