@@ -31,12 +31,9 @@ jobs:
         with: 
           python-version : 3.8
       - name : execute py script
-        with:
-          script: |
-            import os
-            print("Directory contents:")
-            for f in os.listdir():
-                print(f)
+        run: "ls -la"
+          ./.github/main.py
+
         
         
 
