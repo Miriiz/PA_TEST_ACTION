@@ -33,6 +33,10 @@ jobs:
       - name : execute py script
         run: "ls -la"
       - name : cd fil
+        env:
+          EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
         run : "cd .github && python main.py"
         
         
