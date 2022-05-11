@@ -32,7 +32,7 @@ jobs:
           python-version : 3.8
       - name : some move
         run: "ls -la && cd .github && cd workflows && ls -la "
-      - name : run python
+      - name : run docummentation script
         env:
           EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
