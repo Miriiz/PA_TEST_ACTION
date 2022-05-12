@@ -48,6 +48,7 @@ def getFileFromDir(currentPath):
             newCurrentRep.append(currentPath + r)
     file = []
     for r in newCurrentRep:
+        print("rep : ")
         print(r)
         files = os.listdir(r)
         for name in files:
