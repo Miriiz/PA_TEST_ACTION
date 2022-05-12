@@ -1,4 +1,4 @@
-from src.utils.function import *
+from utils.function import *
 
 if __name__ == '__main__':
     code = getFunctFromFile(os.path.dirname(__file__))
