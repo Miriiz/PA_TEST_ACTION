@@ -5,7 +5,7 @@ from os.path import join
 
 from transformers import AutoTokenizer, AutoModelWithLMHead, SummarizationPipeline
 
-IGNORE_DIR_NAME = "b"
+IGNORE_DIR_NAME = ".github"
 IGNORE_DIR_NAME_2 = ".git"
 pipeline = SummarizationPipeline(
     model=AutoModelWithLMHead.from_pretrained("SEBIS/code_trans_t5_base_code_documentation_generation_python"),
