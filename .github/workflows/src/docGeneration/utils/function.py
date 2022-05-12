@@ -44,11 +44,12 @@ def getFileFromDir(currentPath):
             rep.append(rm)
     newCurrentRep = []
     newCurrentRep.append(currentPath)
-    print(newCurrentRep)
     for r in rep:
-        newCurrentRep.append(currentPath+ r)
+        if r!= currentPath :
+            newCurrentRep.append(currentPath + r)
     file = []
     for r in newCurrentRep:
+        print(r)
         files = os.listdir(r)
         for name in files:
             if os.path.splitext(name)[1] == '.py':
