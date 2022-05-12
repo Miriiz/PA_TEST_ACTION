@@ -30,6 +30,8 @@ jobs:
         uses: actions/setup-python@v3
         with: 
           python-version : 3.8
+      - name : pip install
+        run : pip install -r .github/workflows/src/docGeneration/requirements.txt
       - name : some move
         run: "ls -la && cd .github && cd workflows && ls -la "
       - name : run docummentation script
