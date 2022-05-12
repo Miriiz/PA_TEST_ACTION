@@ -32,8 +32,6 @@ jobs:
           python-version : 3.8
       - name : pip install
         run : pip install -r .github/workflows/src/docGeneration/requirements.txt
-      - name : some move
-        run: "ls -la && cd .github && cd workflows && ls -la "
       - name : run docummentation script
         env:
           EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
@@ -41,11 +39,3 @@ jobs:
           EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
         run :
           python .github/workflows/src/docGeneration/main.py
-        
-        
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.

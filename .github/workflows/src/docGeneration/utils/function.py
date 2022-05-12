@@ -36,10 +36,10 @@ def getFileFromDir(currentPath):
     rep = [f for f in os.listdir(currentPath) if os.path.isdir(join(currentPath, f))]
     newCurrentRep = []
     for r in rep:
-        newCurrentRep.append(currentPath + "\\" + r)
+        newCurrentRep.append(currentPath + "/" + r)
     file = []
     for r in rep:
-        files = os.listdir(currentPath + "\\" + r)
+        files = os.listdir(currentPath + "/" + r)
         for name in files:
             file.append(name)
 
