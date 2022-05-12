@@ -1,8 +1,10 @@
+import os.path
+
 from utils.function import *
 
 if __name__ == '__main__':
     print("path")
-    print(os.path.dirname(".../"+__file__))
+    print(os.path.abspath(__file__))
     code = getFunctFromFile(os.path.dirname(__file__))
 
     codeArray = createCodeAndSummarize(code)
