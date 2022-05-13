@@ -35,6 +35,8 @@ Function to get file from directory
 
 
 def getFileFromDir(currentPath):
+    print(currentPath)
+
     currentPath = ''.join(currentPath.split(IGNORE_DIR_NAME)[0])
     print("Path")
     print(currentPath)
