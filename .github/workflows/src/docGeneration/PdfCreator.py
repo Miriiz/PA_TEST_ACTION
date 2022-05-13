@@ -25,5 +25,8 @@ class PDF(FPDF):
         self.ln()
 
     def save(self, path,  filename):
-        print(path)
-        self.output(path + filename + '.pdf', 'F')
+        if os.path.exists(path):
+            self.output(path + filename + '.pdf', 'F')
+        else:
+            os.mkdir(path)
+            self.output(path + filename + '.pdf', 'F')
