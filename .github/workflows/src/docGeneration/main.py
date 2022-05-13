@@ -1,7 +1,7 @@
 import os.path
 
 from utils.function import *
-from PdfCreator import PDF
+from PdfCreator import  PDF
 
 if __name__ == '__main__':
     code = getFunctFromFile(os.path.dirname(__file__))
