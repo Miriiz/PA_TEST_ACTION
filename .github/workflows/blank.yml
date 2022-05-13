@@ -39,3 +39,9 @@ jobs:
           EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
         run :
           python .github/workflows/src/docGeneration/main.py
+      - name: commit
+        run: |
+          # Stage the file, commit and push
+          git add .*
+          git commit -m "Add Documentation"
+          git push origin main
