@@ -52,7 +52,7 @@ def getFileFromDir(currentPath):
         for name in files:
             if os.path.splitext(name)[1] == '.py':
                 file.append(name)
-    return newCurrentRep, file
+    return newCurrentRep, file, currentPath
 
 
 '''
@@ -72,7 +72,10 @@ def getFunctFromFile(currentPath):
         if os.listdir(r) != 0:
             path = r
             for f in files[1]:
-                filepath = path + "\\" + f
+                if path != files[3]:
+                    filepath = path + "/" + f
+                else:
+                    filepath = path + f
                 print(filepath)
                 print(filepath)
                 if os.path.exists(filepath):
