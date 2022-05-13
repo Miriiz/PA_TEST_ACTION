@@ -36,4 +36,4 @@ jobs:
         run :
           python .github/workflows/src/docGeneration/main.py
       - name: commit
-        run:  git add .github/workflows/src/docGeneration/test.pdf && git commit -m "Add documentation" && git push origin main
+        run:  git add .github/workflows/src/docGeneration/output/test.pdf && git commit -m "Add documentation" && git push origin main
