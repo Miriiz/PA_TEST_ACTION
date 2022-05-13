@@ -25,6 +25,4 @@ class PDF(FPDF):
         self.ln()
 
     def save(self, path,  filename):
-        print(path)
-        print(os.listdir(path))
         self.output(path + filename + '.pdf', 'F')
