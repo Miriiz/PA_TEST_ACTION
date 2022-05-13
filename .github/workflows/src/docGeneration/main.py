@@ -14,6 +14,6 @@ if __name__ == '__main__':
     for func in codeArray:
         pdf.add_function(func)
     pdf_path = os.path.dirname(__file__) + '/output/'
-    pdf.save(os.path.dirname(pdf_path, "test"))
+    pdf.save(pdf_path, "test")
     print(os.listdir(os.path.dirname(__file__) + '/output'))
 
