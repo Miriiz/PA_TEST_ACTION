@@ -15,5 +15,6 @@ if __name__ == '__main__':
         pdf.add_function(func)
     pdf_path = os.path.dirname(os.path.abspath(__file__)) + 'output/'
     print(pdf_path)
+    print(pdf_path)
     pdf.save(pdf_path, "test")
     print(os.listdir(os.path.dirname(__file__) + '/output'))
