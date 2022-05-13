@@ -66,11 +66,14 @@ def getFunctFromFile(currentPath):
     path = files[0]
     func = []
     val = ""
+    print("files",files[0])
+    print("avant for")
     for r in files[0]:
         if os.listdir(r) != 0:
             path = r
             for f in files[1]:
                 filepath = path + "\\" + f
+                print(filepath)
                 print(filepath)
                 if os.path.exists(filepath):
                     print("ici")
