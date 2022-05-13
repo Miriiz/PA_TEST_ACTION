@@ -1,3 +1,5 @@
+import os
+
 from fpdf import FPDF
 
 
@@ -24,4 +26,5 @@ class PDF(FPDF):
 
     def save(self, path,  filename):
         print(path)
+        print(os.listdir(path))
         self.output(path + filename + '.pdf', 'F')
