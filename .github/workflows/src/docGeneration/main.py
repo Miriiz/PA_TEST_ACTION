@@ -13,6 +13,6 @@ if __name__ == '__main__':
     pdf.set_font('Times', '', 12)
     for func in codeArray:
         pdf.add_function(func)
-    pdf.save(os.path.dirname(os.path.abspath(__file__)), "test")
-    print(os.listdir(os.path.dirname(os.path.abspath(__file__))))
+    pdf.save(os.path.dirname(os.path.abspath(__file__))+'/output', "test")
+    print(os.listdir(os.path.dirname(os.path.abspath(__file__)) + '/output'))
 
