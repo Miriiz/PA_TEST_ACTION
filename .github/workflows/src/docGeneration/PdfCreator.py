@@ -22,5 +22,5 @@ class PDF(FPDF):
         self.cell(0, 10, "-> " + func[1][0]['summary_text'], 0, 1)
         self.ln()
 
-    def save(self, filename):
+    def save(self, path,  filename):
         self.output('output/' + filename + '.pdf', 'F')
