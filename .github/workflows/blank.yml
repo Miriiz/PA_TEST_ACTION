@@ -33,10 +33,6 @@ jobs:
       - name : pip install
         run : pip install -r .github/workflows/src/docGeneration/requirements.txt
       - name : run docummentation script
-        env:
-          EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
-          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-          EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
         run :
           python .github/workflows/src/docGeneration/main.py
       - name: commit
