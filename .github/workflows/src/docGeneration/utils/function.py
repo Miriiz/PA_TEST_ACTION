@@ -72,7 +72,7 @@ def getFunctFromFile(currentPath):
         if os.listdir(r) != 0:
             path = r
             for f in files[1]:
-                if path != files[3]:
+                if path != files[2]:
                     filepath = path + "/" + f
                 else:
                     filepath = path + f
