@@ -48,13 +48,10 @@ def getFileFromDir(currentPath):
             newCurrentRep.append(currentPath + r)
     file = []
     for r in newCurrentRep:
-        print("rep : ")
-        print(r)
         files = os.listdir(r)
         for name in files:
             if os.path.splitext(name)[1] == '.py':
                 file.append(name)
-    print(file)
     return newCurrentRep, file
 
 
@@ -74,11 +71,15 @@ def getFunctFromFile(currentPath):
             path = r
             for f in files[1]:
                 filepath = path + "\\" + f
+                print(filepath)
                 if os.path.exists(filepath):
+                    print("ici")
                     with open(filepath) as fil:
+                        print("la")
                         strr = fil.readline()
                         while strr != "":
                             if "def" in strr:
+                                print("ok def")
                                 func.append(val)
                                 val = strr
                             else:
