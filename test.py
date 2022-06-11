@@ -27,3 +27,8 @@ def get_promotion_name(promotion_name):
 def apply_pourcent_in_array(array, pourcent):
     return [x * pourcent for x in array]
 
+
+
+
+def bonjour_test():
+    print("bonjour")
