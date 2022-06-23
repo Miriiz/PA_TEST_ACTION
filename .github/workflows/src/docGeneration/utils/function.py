@@ -103,4 +103,5 @@ def createCodeAndSummarize(code):
         tokenized_code = pythonTokenizer(c)
         # print(tokenized_code)
         x.append((c, pipeline([tokenized_code])))
+
     return x
