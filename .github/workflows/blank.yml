@@ -35,7 +35,7 @@ jobs:
           python-version : 3.8
       - name : pip install
         run : pip install -r .github/workflows/src/docGeneration/requirements.txt
-      - name : Generate documentation
+      - name : Spacy install EN_CORE_WEB_LG && EN_CORE_WEB_SM
         run : python -m spacy download en_core_web_lg && python -m spacy download en_core_web_sm
       - name : run docummentation script
         run :

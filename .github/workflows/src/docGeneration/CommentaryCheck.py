@@ -1,5 +1,5 @@
 import itertools
-from src.docGeneration.utils.function import *
+from utils.function import *
 
 if __name__ == '__main__':
     code, file = getFunctFromFile(os.path.dirname(os.path.abspath(__file__)))
