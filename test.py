@@ -29,6 +29,5 @@ def apply_pourcent_in_array(array, pourcent):
 
 
 # Modifier la police
-
 def bonjour_test():
     print("bonjour")

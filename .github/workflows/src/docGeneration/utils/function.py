@@ -115,9 +115,7 @@ Fonction to generate summarize from function
 def createCodeAndSummarize(code):
     x = []
     for c in code:
-        print("Avant tokenization", c)
         tokenized_code = pythonTokenizer(c)
-        print("Code tokenizer", tokenized_code)
         x.append((c, pipeline([tokenized_code])))
     return x
 
@@ -212,7 +210,6 @@ def SameMeaning_nlp(cc, ca):
     str2_nlp = nlp(ca[1][0]["summary_text"])
     str_nlp_nostop = nlp(' '.join([str(t) for t in str_nlp if not t.is_stop]))
     str2_nlp_nostop = nlp(' '.join([str(t) for t in str2_nlp if not t.is_stop]))
-    print("Before write")
     write_cosine(getFunctionName(ca[0]), round(str_nlp_nostop.similarity(str2_nlp_nostop) * 100, 2))
     return str_nlp_nostop.similarity(str2_nlp_nostop) > 0.5
 
@@ -235,3 +232,4 @@ def write_cosine(functionName, consineValue):
         with open(path + '/commentarySimilarity.log', 'w+') as f:
             f.write("Commentary Similarity for function :  " + functionName + ' : \t' + str(consineValue) + '% \n')
             print("Commentary Similarity for function :  " + functionName + ' : \t' + str(consineValue) + '% \n')
+            print(os.path.exists(path + '/commentarySimilarity.log'))
