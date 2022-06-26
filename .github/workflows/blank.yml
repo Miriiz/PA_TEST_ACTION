@@ -35,9 +35,13 @@ jobs:
           python-version : 3.8
       - name : pip install
         run : pip install -r .github/workflows/src/docGeneration/requirements.txt
+      - name : Generate documentation
+        run : python -m spacy download en_core_web_lg && python -m spacy download en_core_web_sm
       - name : run docummentation script
         run :
           python .github/workflows/src/docGeneration/main.py
-
+      - name :  Generate commentary check
+        run :
+          - python .github/workflows/src/docGeneration/commentaryCheck.py
       - name: commit
         run:  git add * && git commit -m "Add documentation" -a && git push origin main
