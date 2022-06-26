@@ -223,7 +223,7 @@ def write_cosine(functionName, consineValue):
     path = os.path.dirname(os.path.abspath(__file__)).split(IGNORE_DIR_NAME)[0] + 'output/'
     if not os.path.exists(path):
         os.makedirs(path)
-    if os.path.exists(path + 'commentarySimilarity.log'):
+    if os.path.exists(path + 'commentarySimilarity.txt'):
         with open(path + 'commentarySimilarity.log', 'a') as f:
             f.write("Commentary Similarity for function :  " + functionName + ' : \t' + str(consineValue) + '% \n')
             print("Commentary Similarity for function :  " + functionName + ' : \t' + str(consineValue) + '% \n')
@@ -233,4 +233,4 @@ def write_cosine(functionName, consineValue):
         with open(path + 'commentarySimilarity.log', 'w+') as f:
             f.write("Commentary Similarity for function :  " + functionName + ' : \t' + str(consineValue) + '% \n')
             print("Commentary Similarity for function :  " + functionName + ' : \t' + str(consineValue) + '% \n')
-            os.system('git add ' + path + 'commentarySimilarity.log')
+            os.system('git add ' + path + 'commentarySimilarity.txt')
