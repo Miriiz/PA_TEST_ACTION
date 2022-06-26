@@ -42,6 +42,6 @@ jobs:
           python .github/workflows/src/docGeneration/main.py
       - name :  Generate commentary check
         run :
-          python .github/workflows/src/codeCorrection/CommentaryCheck.py
+          python .github/workflows/src/docGeneration/CommentaryCheck.py
       - name: commit
         run:  git add * && git commit -m "Add documentation" -a && git push origin main
