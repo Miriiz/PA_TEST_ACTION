@@ -67,3 +67,4 @@ win32-setctime==1.0.3
 wincertstore==0.2
 wsproto==1.0.0
 yarl==1.7.2
+matplotlib
