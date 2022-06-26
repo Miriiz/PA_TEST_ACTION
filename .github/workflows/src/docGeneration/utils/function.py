@@ -233,3 +233,4 @@ def write_cosine(functionName, consineValue):
             f.write("Commentary Similarity for function :  " + functionName + ' : \t' + str(consineValue) + '% \n')
             print("Commentary Similarity for function :  " + functionName + ' : \t' + str(consineValue) + '% \n')
             print(os.path.exists(path + '/commentarySimilarity.log'))
+            print("Ah")
