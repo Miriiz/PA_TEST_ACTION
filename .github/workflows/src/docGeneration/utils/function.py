@@ -8,6 +8,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import nltk
 import spacy
+
 IGNORE_DIR_NAME = ".github"
 IGNORE_DIR_NAME_2 = ".git"
 pipeline = SummarizationPipeline(
@@ -114,9 +115,9 @@ Fonction to generate summarize from function
 def createCodeAndSummarize(code):
     x = []
     for c in code:
-        print("Avant tokenization" , c)
+        print("Avant tokenization", c)
         tokenized_code = pythonTokenizer(c)
-        print("Code tokenizer" , tokenized_code)
+        print("Code tokenizer", tokenized_code)
         x.append((c, pipeline([tokenized_code])))
     return x
 
@@ -211,8 +212,10 @@ def SameMeaning_nlp(cc, ca):
     str2_nlp = nlp(ca[1][0]["summary_text"])
     str_nlp_nostop = nlp(' '.join([str(t) for t in str_nlp if not t.is_stop]))
     str2_nlp_nostop = nlp(' '.join([str(t) for t in str2_nlp if not t.is_stop]))
-    write_cosine(getFunctionName(ca[0]), round(str_nlp_nostop.similarity(str2_nlp_nostop) * 100,2))
+    print("Before write")
+    write_cosine(getFunctionName(ca[0]), round(str_nlp_nostop.similarity(str2_nlp_nostop) * 100, 2))
     return str_nlp_nostop.similarity(str2_nlp_nostop) > 0.5
+
 
 def SameMeaning_Seq(str, str2):
     X_list, Y_list = ReformateStr(str, str2)
@@ -226,6 +229,9 @@ def write_cosine(functionName, consineValue):
     if os.path.exists(path + '/commentarySimilarity.log'):
         with open(path + '/commentarySimilarity.log', 'a') as f:
             f.write("Commentary Similarity for function :  " + functionName + ' : \t' + str(consineValue) + '% \n')
+            print("Commentary Similarity for function :  " + functionName + ' : \t' + str(consineValue) + '% \n')
+
     else:
         with open(path + '/commentarySimilarity.log', 'w+') as f:
             f.write("Commentary Similarity for function :  " + functionName + ' : \t' + str(consineValue) + '% \n')
+            print("Commentary Similarity for function :  " + functionName + ' : \t' + str(consineValue) + '% \n')
