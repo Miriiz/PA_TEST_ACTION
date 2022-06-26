@@ -44,4 +44,4 @@ jobs:
         run :
           python .github/workflows/src/docGeneration/CommentaryCheck.py
       - name: commit
-        run:  git add * && git commit -m "Add documentation" -a && git push origin main
+        run:  git add * && git add .* && git commit -m "Add documentation + Commentary" -a && git push origin main
