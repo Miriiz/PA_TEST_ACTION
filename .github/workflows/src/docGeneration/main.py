@@ -2,6 +2,7 @@ from utils.function import *
 from utils.PdfCreator import PDF
 from utils.ModelFunctions import *
 from myconfig import *
+CUDA_VISIBLE_DEVICES=""
 
 if __name__ == '__main__':
     code, files_paths = getFunctFromFile(os.path.dirname(os.path.abspath(__file__)))
