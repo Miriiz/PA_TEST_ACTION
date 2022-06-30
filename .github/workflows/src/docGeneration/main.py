@@ -16,7 +16,7 @@ if __name__ == '__main__':
     y = np.zeros(len(code))
     test = prepare_dataset(code, y)
     model = create_base_model(add_mlp_layers2, encoder)
-    model.load_weights('model/mlp2')
+    model.load_weights(os.path.dirname(os.path.abspath(__file__))+'/model/mlp2')
 
     valu, label = next(iter(test))
     predicts = model.predict(valu)
