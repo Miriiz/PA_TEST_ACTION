@@ -24,7 +24,8 @@ if __name__ == '__main__':
     for file_path in files_paths:
         pdf.add_path(file_path[0])
         for i in range(function_index, function_index + file_path[1]):
-            if predicts[function_index] > 0.51:
+            print(predicts[function_index])
+            if predicts[function_index] > 0.501:
                 pdf.add_error("Possible memory error in this function")
             pdf.add_function(codeArray[function_index])
             function_index += 1
