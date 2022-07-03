@@ -11,5 +11,5 @@ jobs:
         - /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}:/data
     steps:
       - name: python run
-        run: python3 /data/.github/workflows/src/docGeneration/main.py
+        run: ls /data
 
