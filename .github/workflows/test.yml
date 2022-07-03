@@ -1,7 +1,7 @@
 name: CI
 on:
   push:
-    branches: [ main ]
+    branches: [ test ]
 jobs:
   container-test-job:
     runs-on: ubuntu-latest
@@ -11,5 +11,5 @@ jobs:
         - /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}:/data
     steps:
       - name: python run
-        run: ls -la
+        run: python3 .github/workflows/src/docGeneration/main.py
 
