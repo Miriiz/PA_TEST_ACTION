@@ -12,7 +12,5 @@ jobs:
 #        - /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}:/data
     steps:
       - name: python run
-        run: ls /data
-      - name: test
-        run: ls
+        run: ls -la /data/PA_TEST_ACTION
 
