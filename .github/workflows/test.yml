@@ -12,5 +12,7 @@ jobs:
         - /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}:/data
     steps:
       - name: run documentation script
-        run: python /data/.github/workflows/src/docGeneration/main.py
+        run: python3 /data/.github/workflows/src/docGeneration/main.py
+      - name: Generate commentary check
+        run: python3 /data/.github/workflows/src/docGeneration/CommentaryCheck.py
 
