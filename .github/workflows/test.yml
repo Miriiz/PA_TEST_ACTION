@@ -5,14 +5,12 @@ on:
 jobs:
   container-test-job:
     runs-on: ubuntu-latest
-#    container:
-#      image: daklyann/refactai:test
-#      options: -v /home/runner/work/${{ github.event.repository.name }}:/data
-##      volumes:
-##        - /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}:/data
+    container:
+      image: daklyann/refactai:test
+      options: -v /home/runner/work/${{ github.event.repository.name }}:/data
+      volumes:
+        - /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}:/data
     steps:
-      - name: python run
-        run: ls
-      - name: test
-        run: tree .
+      - name: run documentation script
+        run: python /data/.github/workflows/src/docGeneration/main.py
 
