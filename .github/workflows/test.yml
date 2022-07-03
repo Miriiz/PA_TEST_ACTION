@@ -7,10 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: daklyann/refactai:test
-      options: -v /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}:/data
+      options: -v /home/runner/work/${{ github.event.repository.name }}:/data
 #      volumes:
 #        - /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}:/data
     steps:
       - name: python run
         run: ls /data
+      - name: test
+        run: ls
 
