@@ -5,16 +5,11 @@ on:
 jobs:
   container-test-job:
     runs-on: ubuntu-latest
+    container:
+      image: daklyann/refactai:test
+      volumes:
+        - /:/home/runner/work/PA_TEST_ACTION/PA_TEST_ACTION
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: pip install
-        run: pwd
-
-#    container:
-#      image: daklyann/refactai:test
-#      volumes:
-#        - /:/
-#    steps:
-#      - name: Check for dockerenv file
-#        run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
+      - name: Check for dockerenv file
+        run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
 
