@@ -12,10 +12,8 @@ jobs:
         - /var/run/docker.sock:/var/run/docker.sock
     steps:
       - uses: actions/checkout@v2
-      - name: test
-        run: "ls -al /data"
       - name: run documentation script
-        run: python3 /data/src/docGeneration/main.py
+        run: python3 /data/.github/workflows/src/docGeneration/main.py
       - name: Generate commentary check
-        run: python3 /data/src/docGeneration/CommentaryCheck.py
+        run: python3 /data/.github/workflows/src/docGeneration/CommentaryCheck.py
 
