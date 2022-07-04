@@ -8,7 +8,7 @@ jobs:
     container:
       image: daklyann/refactai:test
       volumes:
-        - .github/workflow:/data
+        - /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}:/:/data
         - /var/run/docker.sock:/var/run/docker.sock
     steps:
       - name: test
