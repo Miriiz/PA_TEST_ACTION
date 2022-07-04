@@ -18,6 +18,6 @@ jobs:
         run: python3 /data/.github/workflows/src/docGeneration/CommentaryCheck.py
       - name: test exit container
         run: exit
-      - name: commit
-        run:  git add ./output/* -f && git commit -m "Add documentation + Commentary" -a && git push origin main
+  #    - name: commit
+  #      run:  git add ./output/* -f && git commit -m "Add documentation + Commentary" -a && git push origin main
 
