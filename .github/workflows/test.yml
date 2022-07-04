@@ -9,6 +9,7 @@ jobs:
       image: daklyann/refactai:test
       volumes:
         - /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}:/data
+        - /var/run/docker.sock:/var/run/docker.sock
     steps:
       - name: run documentation script
         run: python3 /data/.github/workflows/src/docGeneration/main.py
